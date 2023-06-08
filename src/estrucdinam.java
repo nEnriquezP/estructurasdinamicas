@@ -90,6 +90,20 @@ private Node head;
         }
         return false;
     }
-
+    public int searchByIndex(int index) {
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException("El índice se encuentra fuera de rango");
+        }
+        Node current = head;
+        int currentIndex = 0;
+        while (current != null) {
+            if (currentIndex == index) {
+                return current.data;
+            }
+            current = current.next;
+            currentIndex++;
+        }
+        return -1;
+    }
 
 }
