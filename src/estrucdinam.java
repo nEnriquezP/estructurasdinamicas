@@ -60,4 +60,17 @@ private Node head;
             System.out.println();
         }
     }
+    public void traverseBackward() {
+        if (isEmpty()) {
+            System.out.println("La lista se encuentra vacía.");
+        } else {
+            Node current = tail;
+            System.out.print("Lista==> ");
+            while (current != null) {
+                System.out.print(current.data + " ");
+                current = current.prev;
+            }
+            System.out.println();
+        }
+    }
 }
