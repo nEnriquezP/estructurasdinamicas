@@ -73,4 +73,11 @@ private Node head;
             System.out.println();
         }
     }
+    public int getSize() {
+        return size;
+    }
+
+    public boolean isEmpty() {
+        return size == 0;
+    }
 }
