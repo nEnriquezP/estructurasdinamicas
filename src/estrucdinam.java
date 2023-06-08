@@ -105,5 +105,35 @@ private Node head;
         }
         return -1;
     }
-
+    public void deleteElement(int value) {
+        if (isEmpty()) {
+            System.out.println("La lista se encuentra vacía por lo TANTO No se puede borrar ningún elemento");
+            return;
+        }
+        Node current = head;
+        while (current != null) {
+            if (current.data == value) {
+                if (current == head) {
+                    head = current.next;
+                    if (head != null) {
+                        head.prev = null;
+                    }
+                    if (current == tail) {
+                        tail = null;
+                    }
+                } else if (current == tail) {
+                    tail = current.prev;
+                    tail.next = null;
+                } else {
+                    current.prev.next = current.next;
+                    current.next.prev = current.prev;
+                }
+                size--;
+                System.out.println("El elemento... " + value + " se ha borrado de la lista");
+                return;
+            }
+            current = current.next;
+        }
+        System.out.println("El elemento... " + value + " no se encontró en la lista");
+    }
 }
