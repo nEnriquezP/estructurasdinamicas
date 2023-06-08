@@ -80,4 +80,16 @@ private Node head;
     public boolean isEmpty() {
         return size == 0;
     }
+    public boolean searchByValue(int value) {
+        Node current = head;
+        while (current != null) {
+            if (current.data == value) {
+                return true;
+            }
+            current = current.next;
+        }
+        return false;
+    }
+
+
 }
