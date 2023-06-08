@@ -47,5 +47,17 @@ private Node head;
         }
         size++;
     }
-
+    public void traverseForward() {
+        if (isEmpty()) {
+            System.out.println("La lista se encuentra vacía");
+        } else {
+            Node current = head;
+            System.out.print("Lista==> ");
+            while (current != null) {
+                System.out.print(current.data + " ");
+                current = current.next;
+            }
+            System.out.println();
+        }
+    }
 }
