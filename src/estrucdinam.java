@@ -17,10 +17,23 @@ private Node head;
             this.next = null;
         }
     }
-
     public estrucdinam() {
         this.head = null;
         this.tail = null;
         this.size = 0;
     }
+
+    public void insertAtBeginning(int data) {
+        Node newNode = new Node(data);
+        if (isEmpty()) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            newNode.next = head;
+            head.prev = newNode;
+            head = newNode;
+        }
+        size++;
+    }
+
 }
