@@ -18,4 +18,9 @@ private Node head;
         }
     }
 
+    public estrucdinam() {
+        this.head = null;
+        this.tail = null;
+        this.size = 0;
+    }
 }
