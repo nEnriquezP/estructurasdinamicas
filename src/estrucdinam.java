@@ -35,5 +35,17 @@ private Node head;
         }
         size++;
     }
+    public void insertAtEnd(int data) {
+        Node newNode = new Node(data);
+        if (isEmpty()) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            newNode.prev = tail;
+            tail.next = newNode;
+            tail = newNode;
+        }
+        size++;
+    }
 
 }
